@@ -5,11 +5,14 @@ import { NodeGlobalsPolyfillPlugin } from '@esbuild-plugins/node-globals-polyfil
 import { NodeModulesPolyfillPlugin } from '@esbuild-plugins/node-modules-polyfill'
 import rollupNodePolyFill from 'rollup-plugin-node-polyfills'
 
+
 // https://vitejs.dev/config/
 export default defineConfig({
+  plugins: [react()],
   resolve: {
     alias: {
-      './runtimeConfig': './runtimeConfig.browser',
+      // This Rollup aliases are extracted from @esbuild-plugins/node-modules-polyfill, 
+      // see https://github.com/remorses/esbuild-plugins/blob/master/node-modules-polyfill/src/polyfills.ts
       util: 'rollup-plugin-node-polyfills/polyfills/util',
       sys: 'util',
       events: 'rollup-plugin-node-polyfills/polyfills/events',
@@ -40,7 +43,9 @@ export default defineConfig({
       vm: 'rollup-plugin-node-polyfills/polyfills/vm',
       zlib: 'rollup-plugin-node-polyfills/polyfills/zlib',
       tty: 'rollup-plugin-node-polyfills/polyfills/tty',
-      domain: 'rollup-plugin-node-polyfills/polyfills/domain'
+      domain: 'rollup-plugin-node-polyfills/polyfills/domain',
+      buffer: 'rollup-plugin-node-polyfills/polyfills/buffer-es6',
+      process: 'rollup-plugin-node-polyfills/polyfills/process-es6'
     }
   },
   optimizeDeps: {
@@ -64,9 +69,9 @@ export default defineConfig({
       plugins: [
         // Enable rollup polyfills plugin
         // used during production bundling
-        rollupNodePolyFill()
+        // @ts-ignore
+        rollupNodePolyFill(),
       ]
     }
-  },
-  plugins: [react()]
+  }
 })

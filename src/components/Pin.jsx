@@ -15,7 +15,7 @@ const Pin = ({pin: {postedBy, image, _id, destination, save}}) => {
 
   const user = fetchUser()
 
-  const alreadySaved = !!(save?.filter((item) => item.postedBy._id === user.uid))?.length
+  const alreadySaved = !!(save?.filter((item) => item.postedBy._id === user?.uid))?.length
 
   const savePin = (id) => {
     if(!alreadySaved){
@@ -26,10 +26,10 @@ const Pin = ({pin: {postedBy, image, _id, destination, save}}) => {
         .setIfMissing({save: []})
         .insert(`after`, 'save[-1]', [{
           _key: uuidv4(),
-          userId: user.uid,
+          userId: user?.uid,
           postedBy: {
             _type: 'postedBy',
-            _ref: user.uid
+            _ref: user?.uid
           }
         }])
         .commit()
