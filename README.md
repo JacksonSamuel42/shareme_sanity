@@ -1,6 +1,6 @@
 ### SHAREME
 
-[ShareMe Site Page](https://shareme-sanity-site.netlify.app/login)
+[ShareMe Site Page](https://shareme-sanity-site.netlify.app)
 
 shareMe is a photo-sharing social network inspired by **pinterest**
 
