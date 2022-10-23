@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { GoogleButton } from "react-google-button"
+import { FcGoogle } from 'react-icons/fc';
 import { useNavigate } from "react-router-dom"
 import { UserAuth } from '../context/AuthContext'
 import { shareVideo, logoWhite } from "../assets"
@@ -55,7 +55,13 @@ const Login = () => {
                         <img src={logoWhite} width="130px" alt="logo" />
                     </div>
                     <div className="shadow-2xl">
-                        <GoogleButton onClick={handleGoogleSignIn} />
+                        <button
+                            className="bg-mainColor flex justify-center items-center p-3 rounded-lg cursor-pointer outline-none"
+                            type='button' 
+                            onClick={handleGoogleSignIn}
+                        >
+                            <FcGoogle className="mr-4" /> Sign in with google
+                        </button>
                     </div>
                 </div>
             </div>
