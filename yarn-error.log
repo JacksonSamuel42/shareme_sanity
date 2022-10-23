@@ -1,0 +1,65 @@
+Arguments: 
+  G:\Program Files\nodejs\node.exe G:\Users\Jackson Samuel\AppData\Roaming\npm\node_modules\@sanity\cli\vendor\yarn install --json --non-interactive --ignore-engines --network-timeout 60000 --registry https://registry.npmjs.org
+
+PATH: 
+  G:\Users\Jackson Samuel\AppData\Roaming\npm\node_modules\vendor;G:\cmder\vendor\conemu-maximus5;G:\cmder\vendor\conemu-maximus5\ConEmu;G:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64_win\mpirt;G:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64_win\compiler;G:\Python310\Scripts\;G:\Python310\;G:\Windows\system32;G:\Windows;G:\Windows\System32\Wbem;G:\Windows\System32\WindowsPowerShell\v1.0\;G:\Windows\System32\OpenSSH\;G:\Program Files\nodejs\;G:\ProgramData\chocolatey\bin;G:\Program Files\dotnet\;G:\Program Files\Git\cmd;G:\Program Files\Go\bin;G:\Users\Jackson Samuel\AppData\Local\Microsoft\WindowsApps;G:\Users\Jackson Samuel\AppData\Roaming\npm;G:\Users\Jackson Samuel\AppData\Local\Programs\Microsoft VS Code\bin;G:\Users\Jackson Samuel\.dotnet\tools;G:\wamp64\bin\php\php7.4.26;G:\Users\Jackson Samuel\AppData\Local\ComposerSetup\bin;G:\Users\Jackson Samuel\AppData\Roaming\Composer\vendor\bin;G:\Users\Jackson Samuel\go\bin;G:\Program Files\Git\mingw64\bin;G:\Program Files\Git\usr\bin;G:\cmder\vendor\bin;G:\cmder
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  16.14.2
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.npmjs.org/@sanity/base/-/base-2.33.2.tgz: ESOCKETTIMEDOUT
+      at ClientRequest.<anonymous> (G:\Users\Jackson Samuel\AppData\Roaming\npm\node_modules\@sanity\cli\vendor\yarn:135945:19)
+      at Object.onceWrapper (node:events:645:28)
+      at ClientRequest.emit (node:events:526:28)
+      at TLSSocket.emitRequestTimeout (node:_http_client:758:9)
+      at Object.onceWrapper (node:events:645:28)
+      at TLSSocket.emit (node:events:538:35)
+      at TLSSocket.Socket._onTimeout (node:net:501:8)
+      at listOnTimeout (node:internal/timers:559:17)
+      at processTimers (node:internal/timers:502:7)
+
+npm manifest: 
+  {
+    "name": "shareme",
+    "private": true,
+    "version": "1.0.0",
+    "description": "",
+    "main": "package.json",
+    "author": "Jackson Samuel <samuelteixeira044@gmail.com>",
+    "license": "UNLICENSED",
+    "scripts": {
+      "start": "sanity start",
+      "build": "sanity build"
+    },
+    "keywords": [
+      "sanity"
+    ],
+    "dependencies": {
+      "@sanity/base": "^2.33.2",
+      "@sanity/core": "^2.33.2",
+      "@sanity/default-layout": "^2.33.2",
+      "@sanity/default-login": "^2.33.2",
+      "@sanity/desk-tool": "^2.33.2",
+      "@sanity/eslint-config-studio": "^2.0.0",
+      "@sanity/vision": "^2.33.2",
+      "eslint": "^8.6.0",
+      "prop-types": "^15.7",
+      "react": "^17.0",
+      "react-dom": "^17.0",
+      "styled-components": "^5.2.0"
+    },
+    "devDependencies": {}
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
